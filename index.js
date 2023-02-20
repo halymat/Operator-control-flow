@@ -26,9 +26,17 @@ if (bolatitoSubjects === "SCIENCE") {
 
 // The subjects Bolatito will be taking are: English, Mathematics, Government, Economics, Literature, History.
 
-let num = 60;
+// Program that takes two positive number and find the power of 2 nearest to the number
 
-for (let i = 0; i ** 2; i++) {
-    num += i;
+let pwr = 0;
+let num = 40;
+for (let index = num; index >= 1; index--) {
+    // If index is a power of 2
+    if ((index & (index - 1)) == 0) {
+        pwr = index;
+        break;
+    }
 }
-console.log(num);
+console.log("The number " + pwr + " is the power of 2 nearest to " + num + ".");
+
+// The number 32 is the power of 2 nearest to 40.
